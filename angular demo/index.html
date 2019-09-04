@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="style/styles.css" rel="stylesheet">
+
+    <script src="script/index.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="appCtrl">
+<div class="container">
+    <div class="row">
+        <div class="card" style="width: 20rem;">
+            <div class="card-header">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Account Number</a>
+                    </li>
+            </ul></div>
+            <div class="card-header">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search" ng-model="searchCriteria1">
+            </div>
+            <div class="card-header"><input type="checkbox" ng-model="accountAll" ng-click="selectAllAccount()"> Select All</div>
+            <div id="scrollable">
+                <ul class="list-group list-group-flush" ng-repeat="account in accounts | filter:searchCriteria1">
+
+                    <li class="list-group-item">
+                        <input type="checkbox" ng-model="account.selected"> {{account.accountNumber}} - {{account.accountName}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card" style="width: 20rem;">
+            <div class="card-header">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#!Entitlement">Entitlement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#!Template">Template</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ng-view"></div>
+        </div>
+    </div>
+
+    <div id="buttonRow" class="row"  style="width: 40rem;">
+        <button id="button" type="button" class="btn btn-primary" ng-click="save()">Assign Entitlements</button>
+    </div>
+</div>
+</body>
+</html>

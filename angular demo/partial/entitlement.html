@@ -1,0 +1,13 @@
+<div>
+    <div class="card-header">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search" ng-model="searchCriteria2">
+    </div>
+    <div class="card-header"><input type="checkbox" ng-model="entitlementAll" ng-click="selectAllEntitlement()"> Select All</div>
+    <div id="scrollable">
+        <ul class="list-group list-group-flush" ng-repeat="entitlement in entitlements | filter:searchCriteria2">
+            <li class="list-group-item">
+                <input type="checkbox" ng-model="entitlement.selected"> {{entitlement.name}}
+            </li>
+        </ul>
+    </div>
+</div>

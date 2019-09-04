@@ -1,0 +1,10 @@
+<div>
+
+</div>
+<div>
+    <ul class="list-group list-group-flush" ng-repeat="template in templates | filter:searchCriteria3">
+        <li class="list-group-item">
+            <input type="radio" name="optradio" ng-model="templateSelected"> {{template.name}}
+        </li>
+    </ul>
+</div>

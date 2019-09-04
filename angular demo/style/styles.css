@@ -1,0 +1,19 @@
+.container {
+   height: 55vh;
+   margin-left: 22%;
+}
+
+#scrollable {
+   height: 54vh;
+   overflow-y: scroll;
+}
+
+#buttonRow {
+  position: relative;
+}
+
+#button {
+    position: absolute;
+    margin-top: 25px;
+    right: 0;
+}
