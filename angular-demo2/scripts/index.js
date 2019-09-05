@@ -57,6 +57,56 @@ app.controller('appCtrl', ['$scope', function( $scope ) {
                billPayment: true,
                informationReporting: false,
                selected: false
+            },
+            {
+               accountNumber: '10000005',
+               accountName: 'Escrow 1',
+               toggleAll: false,
+               wireTransfer: true,
+               internalTransfer: false,
+               billPayment: true,
+               informationReporting: false,
+               selected: false
+            },
+            {
+               accountNumber: '10000006',
+               accountName: 'Escrow 2',
+               toggleAll: false,
+               wireTransfer: true,
+               internalTransfer: false,
+               billPayment: true,
+               informationReporting: false,
+               selected: false
+            },
+            {
+               accountNumber: '10000007',
+               accountName: 'Escrow 3',
+               toggleAll: false,
+               wireTransfer: true,
+               internalTransfer: false,
+               billPayment: true,
+               informationReporting: false,
+               selected: false
+            },
+            {
+               accountNumber: '10000008',
+               accountName: 'Checking 2',
+               toggleAll: false,
+               wireTransfer: true,
+               internalTransfer: false,
+               billPayment: true,
+               informationReporting: false,
+               selected: false
+            },
+            {
+               accountNumber: '10000009',
+               accountName: 'Checking 3',
+               toggleAll: false,
+               wireTransfer: true,
+               internalTransfer: false,
+               billPayment: true,
+               informationReporting: false,
+               selected: false
             }
          ];
 
